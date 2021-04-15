@@ -60,7 +60,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         return res.json({ error: "Webhook handler failed." });
       }
     }
-
     res.json({ received: true });
   } else {
     res.setHeader("Allow", "POST");

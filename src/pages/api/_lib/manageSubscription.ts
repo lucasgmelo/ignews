@@ -18,12 +18,11 @@ export async function saveSubscription(
   const subscription = await stripe.subscriptions.retrieve(subscriptionId);
 
   const subscriptionData = {
-      id: subscription.id,
-      userId: userRef,
-      status: subscription.status,
-      price_id: subscription.items.data[0].price.id,
-
-  }
+    id: subscription.id,
+    userId: userRef,
+    status: subscription.status,
+    price_id: subscription.items.data[0].price.id,
+  };
 
   await fauna.query(
     query.Create(query.Collection("subscriptions"), { data: subscriptionData })
