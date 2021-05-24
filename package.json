@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.14.2",
     "@prismicio/client": "^4.0.0",
     "@stripe/stripe-js": "^1.13.2",
     "@types/next-auth": "3.7.1",
